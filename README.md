@@ -1,2 +1,2 @@
 # CI-with-Jenkins-in-GCP-Demo
-Test CI
+sudo apt install VIM -- Test CI
