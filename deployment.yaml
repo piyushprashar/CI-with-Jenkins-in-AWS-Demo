@@ -17,7 +17,7 @@ metadata:
        spec:
          containers:
          - name: myapp
-           image: piyushdocker/devops:tagversion
+           image: piyush348/piyushdocker:tagversion
              ports:
              - containerPort: 8080
 
