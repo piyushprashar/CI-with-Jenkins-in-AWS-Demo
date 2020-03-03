@@ -57,8 +57,8 @@ pipeline {
                  sh 'ls -ltr'
                  sh 'pwd'
                  sh "sed -i 's/tagversion/${env.BUILD_ID}/g' deployment.yaml"
-                 step([$class: 'KubernetesEngineBuilder', projectID: "piyush-devops", clustername: "kube-demo", zone: "us-central1-c", credentialsID: "Kubernetesjenkins"])
-                 echo "Deployment Finished"
+                 step([$class: 'KubernetesEngineBuilder', projectId: "piyush-devops", clusterName: "kube-demo", zone: "us-central1-c", credentialsId: "Kubernetesjenkins"])
+                echo "Deployment Finished"
             }
         }
     }
