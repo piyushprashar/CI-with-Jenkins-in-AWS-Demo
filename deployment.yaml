@@ -6,20 +6,19 @@ metadata:
   labels:
     app: myapp
   spec:
-    replicas: 2
     selector: 
       matchlabels:
         app: myapp
-     template:
-      metadata:
-        labels:
-          app: myapp
-      spec:
-       containers:
-        - name: myapp
-          image: piyush348/piyushdocker:tagversion
-           ports:
-           - containerPort: 8080
+    template:
+     metadata:
+       labels:
+         app: myapp
+     spec:
+      containers:
+       - name: myapp
+         image: piyush348/piyushdocker:tagversion
+         ports:
+         - containerPort: 8080
 
 
 ---
