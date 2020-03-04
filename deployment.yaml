@@ -5,21 +5,21 @@ metadata:
   name: myapp
   labels:
     app: myapp
-  spec:
-    selector: 
+spec:
+   replicas: 2
+   selector: 
       matchlabels:
         app: myapp
-    template:
+   template:
      metadata:
        labels:
          app: myapp
      spec:
-      containers:
-       - name: myapp
-         image: piyush348/piyushdocker:tagversion
-         ports:
-         - containerPort: 8080
-
+       containers:
+        - name: myapp
+          image: piyush348/piyushdocker:tagversion
+          ports:
+          - containerPort: 8080
 
 ---
 apiVersion: v1
