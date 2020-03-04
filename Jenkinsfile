@@ -43,7 +43,7 @@ pipeline {
          stage('Push Docker Image') {
             steps {
                 script {
-                  docker.withRegistry('https://gcr.io', 'gcr:[piyush-devops]') {
+                  docker.withRegistry('https://gcr.io', 'gcr:piyush-devops') {
                          myimage.push("${env.BUILD_ID}")
                   }
                 }
