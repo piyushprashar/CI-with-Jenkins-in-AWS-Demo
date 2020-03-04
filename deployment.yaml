@@ -17,7 +17,7 @@ spec:
      spec:
        containers:
         - name: myapp
-          image: piyush348/piyushdocker:tagversion
+          image: gcr.io/piyush-devops/piyushdocker/devops:tagversion
           ports:
           - containerPort: 8080
 
