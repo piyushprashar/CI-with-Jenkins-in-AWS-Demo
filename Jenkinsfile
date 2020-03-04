@@ -34,7 +34,7 @@ pipeline {
          stage('Build Docker Image') {
             steps {
                 script {
-                  myimage = docker.build("piyush348/piyushdocker:${env.BUILD_ID}")
+                  myimage = docker.build("gcr.io/piyush-devops/piyush348/piyushdocker:${env.BUILD_ID}")
                 }
             }
         }
@@ -43,7 +43,7 @@ pipeline {
          stage('Push Docker Image') {
             steps {
                 script {
-                  docker.withRegistry('https://registry.hub.docker.com', 'Docker') {
+                  docker.withRegistry('https://gcr.io', 'gcrcredential') {
                          myimage.push("${env.BUILD_ID}")
                   }
                 }
